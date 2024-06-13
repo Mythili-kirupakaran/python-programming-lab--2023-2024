@@ -1,0 +1,18 @@
+def find_non_repeating_elements(arr1, arr2):
+    set1 = set(arr1)
+    set2 = set(arr2)
+    non_repeating_elements = (set1.symmetric_difference(set2))
+    
+    if non_repeating_elements:
+        print(" ".join(map(str, non_repeating_elements)))
+        print(len(non_repeating_elements))
+    else:
+        print("NO SUCH ELEMENTS")
+
+# Reading input
+n, m = map(int, input().split())
+arr1 = list(map(int, input().split()))
+arr2 = list(map(int, input().split()))
+
+# Function call
+find_non_repeating_elements(arr1, arr2)
